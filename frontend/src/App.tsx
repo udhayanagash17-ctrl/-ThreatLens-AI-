@@ -4,6 +4,7 @@ import Layout from './components/Layout';
 import AnimatedBackground from './components/AnimatedBackground';
 import LoadingSpinner from './components/LoadingSpinner';
 import Login from './pages/Login';
+import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import Assets from './pages/Assets';
 import Scans from './pages/Scans';
@@ -58,6 +59,14 @@ export default function App() {
           element={
             <PublicRoute>
               <Login />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <PublicRoute>
+              <Register />
             </PublicRoute>
           }
         />

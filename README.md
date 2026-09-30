@@ -61,17 +61,19 @@ ThreatLens-AI/
 - **Node.js 18+**
 - **Docker & Docker Compose** (optional, for containerized setup)
 
-### Option 1: Docker (Recommended)
+### Option 1: One-Click Start (Easiest)
+
+Just double-click **`start.bat`** — it automatically:
+- Creates a Python virtual environment
+- Installs backend dependencies
+- Installs frontend dependencies
+- Starts both backend and frontend
+
+Then open `http://localhost:5173` in your browser.
+
+### Option 2: Docker
 
 ```bash
-# Clone the repository
-git clone https://github.com/udhayanagash17-ctrl/-ThreatLens-AI-.git
-cd -ThreatLens-AI-
-
-# Create environment file
-cp .env.example .env
-
-# Start all services
 docker-compose up --build
 ```
 
@@ -146,7 +148,7 @@ Once the backend is running, interactive API docs are available at:
 
 ## Usage
 
-1. **Login** with the default admin credentials
+1. **Sign Up** — Create your own account, or login with default admin credentials
 2. **Add Assets** — Register your servers, domains, or IPs
 3. **Run Scans** — Trigger vulnerability or SBOM scans on your assets
 4. **View Dashboard** — Monitor risk scores, alerts, and trends
