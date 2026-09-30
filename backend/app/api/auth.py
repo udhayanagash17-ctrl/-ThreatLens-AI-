@@ -81,7 +81,7 @@ def register(user_data: UserCreate, request: Request, db: Session = Depends(get_
 
 
 @router.post("/login", response_model=Token)
-def login(form_data: OAuth2PasswordRequestForm = Depends(), request: Request, db: Session = Depends(get_db)):
+def login(request: Request, form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
     # Rate limiting
     client_ip = request.client.host if request.client else "unknown"
     if not login_rate_limiter.is_allowed(f"login:{client_ip}"):
