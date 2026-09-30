@@ -139,6 +139,19 @@ Copy `.env.example` to `.env` and configure:
 | AI_MODEL     | OpenAI model to use                  | `gpt-3.5-turbo`            |
 | DEBUG        | Debug mode                           | `true`                     |
 
+## Security
+
+ThreatLens AI includes multiple layers of security:
+
+| Protection | Details |
+|------------|---------|
+| **SQL Injection** | Uses SQLAlchemy ORM with parameterized queries — no raw SQL |
+| **Password Hashing** | bcrypt with salt |
+| **Rate Limiting** | 5 login attempts per 5 minutes per IP |
+| **Input Validation** | Username/password validated against injection patterns |
+| **JWT Auth** | Signed tokens with expiration |
+| **CORS** | Configurable allowed origins |
+
 ## API Documentation
 
 Once the backend is running, interactive API docs are available at:
